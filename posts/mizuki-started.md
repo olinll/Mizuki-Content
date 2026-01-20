@@ -3,6 +3,7 @@ title: Mizuki 入门指南
 published: 2026-01-20
 pinned: true
 description: 对于Mizuki的使用做一些记录，方便自己翻阅
+
 tags: [Markdown]
 category: '碎碎念'
 draft: false
@@ -142,7 +143,7 @@ frontmatter支持的字段包括：
 
 ### [发布相关](https://docs.mizuki.mysqil.com/press/file/#发布相关)
 
-- `published`：文章发布日期，格式为YYYY-MM-DD
+- `published`：文章发布日期，格式为（YYYY-MM-DD）
 - `pubDate`：文章发布日期（与published类似）
 - `date`：文章创建日期
 - `draft`：是否为草稿，true表示草稿，false表示正式发布
@@ -157,20 +158,18 @@ frontmatter支持的字段包括：
 
 :::caution
 
-当别名被设置时：
+设置别名后：
+- 文章将可以通过自定义 URL 访问（例如 `/posts/my-special-article/`）
+- 默认的 `/posts/{slug}/` URL 仍然有效
+- RSS/Atom feed 将使用自定义别名
+- 所有内部链接将自动使用自定义别名
 
-- 帖子将通过自定义网址访问（例如，`/posts/my-special-article/`)
-- 默认网址依然有效`/posts/{slug}/`
-- RSS/Atom 订阅源将使用自定义别名
-- 所有内部链接都会自动使用自定义别名
-
-**重要说明：**
-
-- 别名中不应包含前缀（前缀会自动添加）`/posts/`
-- 避免别名中的特殊字符和空格
-- 使用小写字母和连字符作为最佳SEO实践
-- 确保所有帖子的别名都是唯一的
-- 不要包括前斩或后斩
+**重要提示：**
+- 别名不应包含 `/posts/` 前缀（会自动添加）
+- 避免在别名中使用特殊字符和空格
+- 为了最佳 SEO 实践，请使用小写字母和连字符
+- 确保别名在所有文章中是唯一的
+- 不要包含开头或结尾的斜杠
 
 :::
 
@@ -182,8 +181,26 @@ frontmatter支持的字段包括：
 - `licenseName`：文章许可证名称，如"MIT"、"CC BY 4.0"等
 - `sourceLink`：文章源链接，通常指向GitHub仓库或原始来源
 
+:::note
+
+常见的许可证名称：
+
+- "MIT"
+- "Apache-2.0"
+- "CC BY 4.0"
+- "CC BY-SA 4.0"
+- "Unlicensed"
+
+:::
+
 ### [图片设置](https://docs.mizuki.mysqil.com/press/file/#图片设置)
 
 - `image`：文章封面图片
 
-1. 在frontmatter下方编写文章内容，可以使用标准的Markdown语法。
+- 在frontmatter下方编写文章内容，可以使用标准的Markdown语法。
+
+<ul>
+  <li><a href="/posts/my-first-post/">我的第一篇文章</a></li>
+  <li><a href="/posts/my-second-post/">我的第二篇文章</a></li>
+  <li><a href="/posts/my-third-post/">我的第三篇文章</a></li>
+</ul>
