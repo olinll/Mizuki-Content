@@ -25,7 +25,7 @@ image: "https://pic1.acofork.com/ri/h/556.webp"
 
 ### 使用示例
 
-::github
+::github{repo="olinll/Mizuki"}
 
 ### 语法格式
 
