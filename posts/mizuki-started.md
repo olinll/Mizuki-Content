@@ -5,7 +5,6 @@ pinned: true
 description: 对于Mizuki的使用做一些记录，方便自己翻阅
 tags: [Markdown]
 category: '碎碎念'
-alias: "my-special-article"
 draft: false
 date: 2026-01-20
 image: "https://pic1.acofork.com/ri/h/556.webp"
@@ -132,3 +131,59 @@ image: "https://xxxx.com/556.webp"
 ---
 ```
 
+## [Frontmatter字段详解](https://docs.mizuki.mysqil.com/press/file/#frontmatter字段详解)
+
+frontmatter支持的字段包括：
+
+### [必需字段](https://docs.mizuki.mysqil.com/press/file/#必需字段)
+
+- `title`：文章标题（必需）
+- `description`：文章描述（必需）
+
+### [发布相关](https://docs.mizuki.mysqil.com/press/file/#发布相关)
+
+- `published`：文章发布日期，格式为YYYY-MM-DD
+- `pubDate`：文章发布日期（与published类似）
+- `date`：文章创建日期
+- `draft`：是否为草稿，true表示草稿，false表示正式发布
+- `permalink`: 固定链接
+
+### [内容分类](https://docs.mizuki.mysqil.com/press/file/#内容分类)
+
+- `tags`：文章标签数组，用于标记文章主题
+- `category`：文章分类，用于组织文章
+- `pinned`：是否置顶文章，true表示置顶
+- `alias`：设置别名，帖子将通过自定义网址访问
+
+:::caution
+
+当别名被设置时：
+
+- 帖子将通过自定义网址访问（例如，`/posts/my-special-article/`)
+- 默认网址依然有效`/posts/{slug}/`
+- RSS/Atom 订阅源将使用自定义别名
+- 所有内部链接都会自动使用自定义别名
+
+**重要说明：**
+
+- 别名中不应包含前缀（前缀会自动添加）`/posts/`
+- 避免别名中的特殊字符和空格
+- 使用小写字母和连字符作为最佳SEO实践
+- 确保所有帖子的别名都是唯一的
+- 不要包括前斩或后斩
+
+:::
+
+
+
+### [作者信息](https://docs.mizuki.mysqil.com/press/file/#作者信息)
+
+- `author`：文章作者姓名
+- `licenseName`：文章许可证名称，如"MIT"、"CC BY 4.0"等
+- `sourceLink`：文章源链接，通常指向GitHub仓库或原始来源
+
+### [图片设置](https://docs.mizuki.mysqil.com/press/file/#图片设置)
+
+- `image`：文章封面图片
+
+1. 在frontmatter下方编写文章内容，可以使用标准的Markdown语法。
