@@ -1,15 +1,17 @@
 ---
-title: Mizuki Markdown 语法说明
+title: Mizuki 入门指南
 published: 2026-01-20
 pinned: true
-description: 对于Mizuki的文章语法进行一些记录，方便翻阅
+description: 对于Mizuki的使用做一些记录，方便自己翻阅
 tags: [Markdown]
 category: '碎碎念'
-
+alias: "my-special-article"
 draft: false
-date: 2026-01-01
+date: 2026-01-20
 image: "https://pic1.acofork.com/ri/h/556.webp"
 ---
+
+Mizuki官方文档：[Mizuki Next Theme Doc](https://docs.mizuki.mysqil.com/)
 
 # Markdown常用语法
 
@@ -17,7 +19,7 @@ image: "https://pic1.acofork.com/ri/h/556.webp"
 
 或者使用：[菜鸟教程 - Markdown教程](https://www.runoob.com/markdown/md-tutorial.html)
 
-# Mizuki 扩展语法
+# Mizuki Markdown扩展语法
 
 ## GitHub仓库卡片（GitHub Repository Cards）
 
@@ -33,7 +35,7 @@ image: "https://pic1.acofork.com/ri/h/556.webp"
 ::github{repo="用户名/仓库名"}
 ```
 
-- `repo` 参数：必填，格式为「GitHub 用户名/仓库名称」（如 `matsuzaka-yuki/Mizuki`）
+- `repo` 参数：必填，格式为「GitHub 用户名/仓库名称」（如 `olinll/Mizuki`）
 
 ## 提示框（Admonitions）
 
@@ -109,5 +111,24 @@ image: "https://pic1.acofork.com/ri/h/556.webp"
 
 ```markdown
 :spoiler[剧透内容（可包含 Markdown 语法）]
+```
+
+ # 文章页元数据
+
+在创建的文章添加frontmatter（前置元数据），这是文章的配置信息，必须包含`title`和`description`字段：
+
+```markdown
+---
+title: Mizuki 入门指南
+published: 2026-01-20
+pinned: true
+description: 对于Mizuki的使用做一些记录，方便自己翻阅
+tags: [Markdown]
+category: '碎碎念'
+
+draft: false
+date: 2026-01-20
+image: "https://xxxx.com/556.webp"
+---
 ```
 
